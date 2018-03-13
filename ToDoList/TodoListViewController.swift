@@ -10,7 +10,7 @@ import UIKit
 
 class TodoListViewController: UITableViewController {
 
-    let itemArray = ["Cell 1", "Cell 2", "Cell 3"]
+    var itemArray = ["Cell 1", "Cell 2", "Cell 3"]
 
 
     override func viewDidLoad() {
@@ -52,8 +52,93 @@ class TodoListViewController: UITableViewController {
 
 
 
+    @IBAction func addButtobPushed(_ sender: UIBarButtonItem) {
 
-}
+        var textField = UITextField()
+
+
+
+        let alert = UIAlertController(title: "Add new Publix List Item", message: "", preferredStyle: .alert)
+
+
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            //What will happen once the user clicks the add item button on our UIAlert
+
+            self.itemArray.append(textField.text!)
+
+            self.tableView.reloadData()
+            
+
+
+
+
+        }
+
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Add New Item"
+            textField = alertTextField
+
+
+
+        }
+
+
+
+
+        alert.addAction(action)
+
+        present(alert, animated: true, completion: nil)
+
+
+
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

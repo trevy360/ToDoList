@@ -13,7 +13,7 @@
         <scene sceneID="5rY-UU-Nmi">
             <objects>
                 <tableViewController id="Bhl-ro-cXM" customClass="TodoListViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v9Z-Ua-lRz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v9Z-Ua-lRz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,11 +32,20 @@
                             <outlet property="delegate" destination="Bhl-ro-cXM" id="QNL-pG-QZV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDoList" id="VFp-x0-NeH"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="ToDoList" id="VFp-x0-NeH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Yyt-v0-kBp">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtobPushed:" destination="Bhl-ro-cXM" id="2p1-8U-QsU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8F-hF-yfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-142" y="52"/>
+            <point key="canvasLocation" x="-154" y="39"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fJl-JZ-8DY">
